@@ -441,6 +441,19 @@ button {
           line-height: 37px;
           color: $secondColor;
         }
+        &.joinLogin{
+          background-color: transparent;
+          border-radius: 0;
+          border: 2px solid $secondColor;
+          line-height: 45px;
+          a{
+            color: $secondColor;
+          }
+          i{
+            background-color: $secondColor;
+            color: #fff;
+          }
+        }
       }
     }
   }

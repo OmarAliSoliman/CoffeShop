@@ -406,6 +406,19 @@ button {
   line-height: 37px;
   color: #262626;
 }
+.custom-navbar .links li.join.joinLogin {
+  background-color: transparent;
+  border-radius: 0;
+  border: 2px solid #262626;
+  line-height: 45px;
+}
+.custom-navbar .links li.join.joinLogin a {
+  color: #262626;
+}
+.custom-navbar .links li.join.joinLogin i {
+  background-color: #262626;
+  color: #fff;
+}
 
 .header-slider {
   position: relative;
