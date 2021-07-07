@@ -1307,6 +1307,7 @@ button {
     padding: 10px 20px;
     display: inline-block;
     margin-top: 12px;
+    cursor: pointer;
     &:hover {
       background-color: $mainColor;
       color: #fff;
@@ -1404,21 +1405,22 @@ button {
 }
 
 .offer-info{
-  margin-bottom: 100px;
+  // margin-bottom: 100px;
+  .section-header{
+    // margin-bottom: 15px;
+    margin-bottom: 0;
+    h5{
+      font-size: 25px;
+      margin: 0;
+    }
+  }
   .offerCard{
     border: 1px solid #DDD;
     padding: 10px;
     border-radius: 5px;
+    text-align: center;
     position: relative;
-    height: 350px;
-    padding-right: 440px;
-    // height: fit-content;
     .offer-info-img{
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      transform: translate(0, -50%);
-      // float: right;
       img{
         border-radius: 5px;
         width: 400px;
@@ -1444,6 +1446,7 @@ button {
       width: fit-content;
       padding: 10px 20px;
       margin-top: 40px;
+      margin: auto;
       p{
         margin: 0;
       }
@@ -1641,6 +1644,27 @@ button {
   transform: translate(2px);
 }
 
+#offerModal{
+  .modal-dialog{
+    width: 700px;
+    max-width: 100%;
+  }
+  .modal-footer{
+    text-align: right;
+    justify-content: right;
+    .btn{
+      background-color: transparent;
+      border: 2px solid $mainColor;
+      color: $secondColor;
+      padding: 0;
+      padding: 10px 30px !important;
+      &:hover {
+        background-color: $mainColor;
+        color: #fff;
+      }
+    }
+  }
+}
 
 .site-footer {
   // @extend %img-bg-style;

@@ -1158,6 +1158,7 @@ button {
   padding: 10px 20px;
   display: inline-block;
   margin-top: 12px;
+  cursor: pointer;
 }
 .offer-card .card-link:hover {
   background-color: #b18963;
@@ -1248,22 +1249,19 @@ button {
   margin-bottom: 20px;
 }
 
-.offer-info {
-  margin-bottom: 100px;
+.offer-info .section-header {
+  margin-bottom: 0;
+}
+.offer-info .section-header h5 {
+  font-size: 25px;
+  margin: 0;
 }
 .offer-info .offerCard {
   border: 1px solid #DDD;
   padding: 10px;
   border-radius: 5px;
+  text-align: center;
   position: relative;
-  height: 350px;
-  padding-right: 440px;
-}
-.offer-info .offerCard .offer-info-img {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translate(0, -50%);
 }
 .offer-info .offerCard .offer-info-img img {
   border-radius: 5px;
@@ -1289,6 +1287,7 @@ button {
   width: fit-content;
   padding: 10px 20px;
   margin-top: 40px;
+  margin: auto;
 }
 .offer-info .offerCard .expire p {
   margin: 0;
@@ -1469,6 +1468,26 @@ button {
   opacity: 1 !important;
   visibility: visible !important;
   transform: translate(2px);
+}
+
+#offerModal .modal-dialog {
+  width: 700px;
+  max-width: 100%;
+}
+#offerModal .modal-footer {
+  text-align: right;
+  justify-content: right;
+}
+#offerModal .modal-footer .btn {
+  background-color: transparent;
+  border: 2px solid #b18963;
+  color: #262626;
+  padding: 0;
+  padding: 10px 30px !important;
+}
+#offerModal .modal-footer .btn:hover {
+  background-color: #b18963;
+  color: #fff;
 }
 
 .site-footer {
