@@ -119,6 +119,18 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".sheepPeersForm").length) {
+    $(".sheepPeersForm .form-control").on("focus", function () {
+      $(this).parent(".form-group").find("label").addClass("activeInput");
+      console.log("foces");
+    });
+
+    $(".sheepPeersForm .form-control").on("blur", function () {
+      $(this).parent(".form-group").find("label").removeClass("activeInput");
+      console.log("foces");
+    });
+  }
+
 });
 
 function openNav() {

@@ -367,6 +367,45 @@ button {
   z-index: 10;
 }
 
+
+.pagination {
+  // display: inline-block;
+  // border: 1px solid #000;
+  // width: 34%;
+  // margin: auto;
+  margin-top: 50px;
+  justify-content: center;
+  overflow: auto;
+  li {
+    // display: inline-block;
+  }
+  i {
+    color: $mainColor;
+    font-size: 15px;
+  }
+  .page-item {
+    margin-left: 3px;
+    margin-right: 3px;
+    .page-link {
+      text-align: center;
+      width: 37px;
+      height: 37px;
+      border-radius: 50%;
+      color: $secondColor;
+      border: 1px solid $mainColor;
+      font-weight: bold;
+      line-height: 37px;
+      padding: 0;
+    }
+  }
+  .active {
+    .page-link {
+      background-color: $mainColor;
+      color: #fff;
+    }
+  }
+}
+
 .topheader {
   padding-top: 8px;
   padding-bottom: 10px;
@@ -429,8 +468,12 @@ button {
         background-color: $mainColor;
         border-radius: 30px;
         float: left;
+        border: 2px solid $mainColor;
+        @extend %transition;
+        line-height: 45px;
         a {
           color: #fff;
+          display: block;
         }
         i {
           width: 37px;
@@ -441,21 +484,114 @@ button {
           line-height: 37px;
           color: $secondColor;
         }
+        &:hover{
+          background-color: #fff;
+          a{
+            color: $mainColor;
+          }
+          i{
+            background-color: $mainColor;
+            color: #fff;
+          }
+        }
         &.joinLogin{
           background-color: transparent;
           border-radius: 0;
           border: 2px solid $secondColor;
           line-height: 45px;
+          @extend %transition;
           a{
             color: $secondColor;
+            // @extend %transition;
           }
           i{
             background-color: $secondColor;
             color: #fff;
           }
+          &:hover{
+            background-color: $secondColor;
+            a{
+              color: #fff;
+            }
+          }
         }
       }
     }
+  }
+}
+
+.breadcrumb {
+  @extend %img-bg-style;
+  padding-top: 148px;
+  padding-bottom: 130px;
+  margin-bottom: 50px;
+  display: block;
+  text-align: center;
+  position: relative;
+  background-attachment: fixed;
+  position: relative;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(#000000, 45%);
+  }
+  h5 {
+    display: block !important;
+    font-size: 39px;
+    margin-bottom: 18px;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    z-index: 9;
+  }
+  ul {
+    display: block !important;
+    li {
+      display: inline-block;
+      position: relative;
+      z-index: 9;
+      position: relative;
+      padding-left: 8px;
+      padding-right: 8px;
+      a {
+        color: #fff;
+        font-size: 14px;
+      }
+      &::after {
+        content: "\f110";
+        @extend %inilize-ui-icons;
+        position: absolute;
+        top: 5px;
+        left: -10px;
+        color: #fff;
+      }
+      &:first-child {
+        a {
+          position: relative;
+          &::before {
+            content: "\f1a3";
+            @extend %inilize-ui-icons;
+            color: $mainColor;
+            margin-top: 2px;
+            margin-left: 5px;
+          }
+        }
+      }
+      &:last-child {
+        &::after {
+          content: "";
+        }
+      }
+    }
+  }
+  .edgtf-lighter-effect-top{
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 }
 
@@ -1137,6 +1273,20 @@ button {
       color: #fff;
       padding: 7px 15px;
     }
+    .price{
+      width: 65px;
+      height: 65px;
+      background-color: $mainColor;
+      color: #fff;
+      font-weight: bold;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      font-size: 20px;
+      text-align: center;
+      line-height: 65px;
+      direction: rtl;
+    }
   }
   .card-title {
     color: $mainColor;
@@ -1172,17 +1322,18 @@ button {
     margin-top: 60px;
     a {
       padding: 15px 20px;
-      background-color: $mainColor;
+      // background-color: $mainColor;
       color: #fff;
       color: $secondColor;
       font-size: 18px;
       border: 2px solid $mainColor;
-      color: #fff;
+      color: $mainColor;
       border-radius: 2px;
       @extend %transition;
       &:hover {
-        background-color: #fff;
-        color: $mainColor;
+        background-color: $mainColor;
+        // border-color: #fff;
+        color: #fff;
       }
     }
   }
@@ -1244,6 +1395,252 @@ button {
     }
   }
 }
+
+.all-offers-page{
+  margin-bottom: 90px;
+  .offer-card{
+    margin-bottom: 20px;
+  }
+}
+
+.offer-info{
+  margin-bottom: 100px;
+  .offerCard{
+    border: 1px solid #DDD;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    height: 350px;
+    padding-right: 440px;
+    // height: fit-content;
+    .offer-info-img{
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translate(0, -50%);
+      // float: right;
+      img{
+        border-radius: 5px;
+        width: 400px;
+      }
+    }
+    .date{
+      font-size: 15px;
+      color: #444;
+    }
+    .card-title{
+      font-size: 25px;
+      color: $mainColor;
+      font-weight: 600;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+    .interval{
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .expire{
+      border: 1px dotted $secondColor;
+      width: fit-content;
+      padding: 10px 20px;
+      margin-top: 40px;
+      p{
+        margin: 0;
+      }
+    }
+  }
+}
+
+.contact-us-page {
+  margin-bottom: 90px;
+  .map {
+    iframe {
+      width: 100%;
+      height: 505px;
+      filter: grayscale(1);
+    }
+  }
+  .contact-form-img {
+    margin-top: -150px;
+    background-color: #fff;
+    box-shadow: 0 3px 32px rgba(#000000, 16%);
+    padding: 62px 65px;
+    position: relative;
+    z-index: 9;
+    .sheepPeersForm {
+      padding-left: 0;
+      .contactForm {
+        h5 {
+          font-size: 28px;
+          font-weight: bold;
+          margin: 0;
+          margin-bottom: 16px;
+          color: $mainColor;
+        }
+        p {
+          font-size: 14px;
+          font-weight: 500;
+          color: rgba($secondColor, 50%);
+          line-height: 25px;
+          margin: 0;
+          margin-bottom: 31px;
+        }
+      }
+      .form-group {
+        label {
+          background-color: $mainColor;
+        }
+        label {
+          position: absolute;
+          background-color: #647583;
+          font-size: 12px;
+          color: #fff;
+          padding: 0 9px;
+          border-radius: 2px;
+          top: -8px;
+          right: 10px;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.5s ease;
+        }
+        .form-control {
+          background-color: rgba($mainColor, 7%);
+          height: 50px;
+          border-radius: 0;
+          border: none;
+          &::placeholder {
+            color: rgba(#680d31, 38%);
+          }
+          &:focus {
+            border: 1px solid $mainColor;
+            background-color: #fff;
+          }
+        }
+      }
+      textarea {
+        height: 111px !important;
+        resize: none;
+      }
+      .btn-submit {
+        button {
+          background-color: $mainColor;
+          border: 1px solid $mainColor;
+          width: 169px;
+          text-align: center;
+          height: 44px;
+          line-height: 40px;
+          @extend %transition;
+          color: #fff;
+          i {
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            color: $mainColor;
+            border-radius: 50%;
+            line-height: 30px;
+            text-align: center;
+            @extend %transition;
+          }
+          &:hover {
+            background-color: #fff;
+            .navLink {
+              color: $mainColor;
+            }
+            i {
+              background-color: $mainColor;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .card-img {
+      position: relative;
+      .overlay {
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(#000000, 63%);
+      }
+    }
+  }
+}
+
+.aboutContentImg {
+  margin-top: 65px;
+  .about-content {
+    // margin-top: 45px;
+    h5 {
+      color: $mainColor;
+      font-size: 28px;
+      margin: 0;
+      margin-bottom: 13px;
+    }
+    p {
+      color: rgba($color: $secondColor, $alpha: 70%);
+      font-size: 16px;
+      margin-bottom: 20px;
+      width: 540px;
+      line-height: 28px;
+      max-width: 100%;
+    }
+  }
+  .about-img {
+    text-align: right;
+    img {
+      max-height: 482px;
+    }
+  }
+}
+.aboutCards {
+  margin-bottom: 56px;
+  margin-top: 102px;
+  .aboutCar {
+    margin-bottom: 30px;
+  }
+  .card-img {
+    @extend %img-bg-style;
+    border-radius: 0;
+    position: relative;
+    &::after{
+      background-color: rgba(#000000, 46%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+    }
+    h5 {
+      font-size: 41px;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bold;
+      position: absolute;
+      bottom: -5px;
+      right: -2px;
+      margin: 0;
+      z-index: 9;
+    }
+  }
+  .card-text {
+    margin: 0;
+    color: rgba($secondColor, 70%);
+    font-size: 16px;
+    margin-top: 26px;
+  }
+}
+
+.activeInput {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translate(2px);
+}
+
 
 .site-footer {
   // @extend %img-bg-style;
@@ -1328,6 +1725,21 @@ button {
   }
 }
 
+.all-offers{
+  text-align: center;
+  margin-top: 50px;
+  a{
+    border: 2px solid $mainColor;
+    color: $mainColor;
+    padding: 10px 20px;
+    @extend %transition;
+    &:hover{
+      background-color: #fff;
+      border-color: #fff;
+    }
+  }
+}
+
 @media (max-width: 2560px) {
   .header-slider .edgtf-lighter-effect,
   .about .edgtf-lighter-effect-top {
@@ -1400,6 +1812,22 @@ button {
   .footerDiv {
     margin-bottom: 30px;
   }
+  .offer-info .offerCard {
+    height: fit-content;
+    padding-right: 10px;
+    padding-bottom: 30px;
+    text-align: center;
+    .offer-info-img{
+      position: unset;
+      transform: none;
+    }
+  }
+  .offer-info .offerCard .expire{
+    margin: auto;
+  }
+  .contact-us-page .contact-form-img .card-img{
+    margin-top: 50px;
+  }
 }
 
 @media (max-width: 960px) {
@@ -1439,6 +1867,9 @@ button {
     left: unset;
     bottom: -63px;
     right: 0;
+  }
+  .contact-us-page .contact-form-img{
+    padding: 40px 20px;
   }
 }
 

@@ -334,6 +334,35 @@ button {
   z-index: 10;
 }
 
+.pagination {
+  margin-top: 50px;
+  justify-content: center;
+  overflow: auto;
+}
+.pagination i {
+  color: #b18963;
+  font-size: 15px;
+}
+.pagination .page-item {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+.pagination .page-item .page-link {
+  text-align: center;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  color: #262626;
+  border: 1px solid #b18963;
+  font-weight: bold;
+  line-height: 37px;
+  padding: 0;
+}
+.pagination .active .page-link {
+  background-color: #b18963;
+  color: #fff;
+}
+
 .topheader {
   padding-top: 8px;
   padding-bottom: 10px;
@@ -393,9 +422,12 @@ button {
   background-color: #b18963;
   border-radius: 30px;
   float: left;
+  border: 2px solid #b18963;
+  line-height: 45px;
 }
 .custom-navbar .links li.join a {
   color: #fff;
+  display: block;
 }
 .custom-navbar .links li.join i {
   width: 37px;
@@ -405,6 +437,16 @@ button {
   text-align: center;
   line-height: 37px;
   color: #262626;
+}
+.custom-navbar .links li.join:hover {
+  background-color: #fff;
+}
+.custom-navbar .links li.join:hover a {
+  color: #b18963;
+}
+.custom-navbar .links li.join:hover i {
+  background-color: #b18963;
+  color: #fff;
 }
 .custom-navbar .links li.join.joinLogin {
   background-color: transparent;
@@ -418,6 +460,80 @@ button {
 .custom-navbar .links li.join.joinLogin i {
   background-color: #262626;
   color: #fff;
+}
+.custom-navbar .links li.join.joinLogin:hover {
+  background-color: #262626;
+}
+.custom-navbar .links li.join.joinLogin:hover a {
+  color: #fff;
+}
+
+.breadcrumb {
+  padding-top: 148px;
+  padding-bottom: 130px;
+  margin-bottom: 50px;
+  display: block;
+  text-align: center;
+  position: relative;
+  background-attachment: fixed;
+  position: relative;
+}
+.breadcrumb::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+.breadcrumb h5 {
+  display: block !important;
+  font-size: 39px;
+  margin-bottom: 18px;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  z-index: 9;
+}
+.breadcrumb ul {
+  display: block !important;
+}
+.breadcrumb ul li {
+  display: inline-block;
+  position: relative;
+  z-index: 9;
+  position: relative;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.breadcrumb ul li a {
+  color: #fff;
+  font-size: 14px;
+}
+.breadcrumb ul li::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  color: #fff;
+}
+.breadcrumb ul li:first-child a {
+  position: relative;
+}
+.breadcrumb ul li:first-child a::before {
+  content: "";
+  color: #b18963;
+  margin-top: 2px;
+  margin-left: 5px;
+}
+.breadcrumb ul li:last-child::after {
+  content: "";
+}
+.breadcrumb .edgtf-lighter-effect-top {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .header-slider {
@@ -1009,6 +1125,20 @@ button {
   color: #fff;
   padding: 7px 15px;
 }
+.offer-card .card-img .price {
+  width: 65px;
+  height: 65px;
+  background-color: #b18963;
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 20px;
+  text-align: center;
+  line-height: 65px;
+  direction: rtl;
+}
 .offer-card .card-title {
   color: #b18963;
   font-size: 24px;
@@ -1044,17 +1174,16 @@ button {
 }
 .menue .btn-more a {
   padding: 15px 20px;
-  background-color: #b18963;
   color: #fff;
   color: #262626;
   font-size: 18px;
   border: 2px solid #b18963;
-  color: #fff;
+  color: #b18963;
   border-radius: 2px;
 }
 .menue .btn-more a:hover {
-  background-color: #fff;
-  color: #b18963;
+  background-color: #b18963;
+  color: #fff;
 }
 
 .meune-card {
@@ -1110,6 +1239,236 @@ button {
   font-size: 20px;
   margin: 0;
   color: #262626;
+}
+
+.all-offers-page {
+  margin-bottom: 90px;
+}
+.all-offers-page .offer-card {
+  margin-bottom: 20px;
+}
+
+.offer-info {
+  margin-bottom: 100px;
+}
+.offer-info .offerCard {
+  border: 1px solid #DDD;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+  height: 350px;
+  padding-right: 440px;
+}
+.offer-info .offerCard .offer-info-img {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.offer-info .offerCard .offer-info-img img {
+  border-radius: 5px;
+  width: 400px;
+}
+.offer-info .offerCard .date {
+  font-size: 15px;
+  color: #444;
+}
+.offer-info .offerCard .card-title {
+  font-size: 25px;
+  color: #b18963;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.offer-info .offerCard .interval {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.offer-info .offerCard .expire {
+  border: 1px dotted #262626;
+  width: fit-content;
+  padding: 10px 20px;
+  margin-top: 40px;
+}
+.offer-info .offerCard .expire p {
+  margin: 0;
+}
+
+.contact-us-page {
+  margin-bottom: 90px;
+}
+.contact-us-page .map iframe {
+  width: 100%;
+  height: 505px;
+  filter: grayscale(1);
+}
+.contact-us-page .contact-form-img {
+  margin-top: -150px;
+  background-color: #fff;
+  box-shadow: 0 3px 32px rgba(0, 0, 0, 0.16);
+  padding: 62px 65px;
+  position: relative;
+  z-index: 9;
+}
+.contact-us-page .contact-form-img .sheepPeersForm {
+  padding-left: 0;
+}
+.contact-us-page .contact-form-img .sheepPeersForm .contactForm h5 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 16px;
+  color: #b18963;
+}
+.contact-us-page .contact-form-img .sheepPeersForm .contactForm p {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(38, 38, 38, 0.5);
+  line-height: 25px;
+  margin: 0;
+  margin-bottom: 31px;
+}
+.contact-us-page .contact-form-img .sheepPeersForm .form-group label {
+  background-color: #b18963;
+}
+.contact-us-page .contact-form-img .sheepPeersForm .form-group label {
+  position: absolute;
+  background-color: #647583;
+  font-size: 12px;
+  color: #fff;
+  padding: 0 9px;
+  border-radius: 2px;
+  top: -8px;
+  right: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+.contact-us-page .contact-form-img .sheepPeersForm .form-group .form-control {
+  background-color: rgba(177, 137, 99, 0.07);
+  height: 50px;
+  border-radius: 0;
+  border: none;
+}
+.contact-us-page .contact-form-img .sheepPeersForm .form-group .form-control::placeholder {
+  color: rgba(104, 13, 49, 0.38);
+}
+.contact-us-page .contact-form-img .sheepPeersForm .form-group .form-control:focus {
+  border: 1px solid #b18963;
+  background-color: #fff;
+}
+.contact-us-page .contact-form-img .sheepPeersForm textarea {
+  height: 111px !important;
+  resize: none;
+}
+.contact-us-page .contact-form-img .sheepPeersForm .btn-submit button {
+  background-color: #b18963;
+  border: 1px solid #b18963;
+  width: 169px;
+  text-align: center;
+  height: 44px;
+  line-height: 40px;
+  color: #fff;
+}
+.contact-us-page .contact-form-img .sheepPeersForm .btn-submit button i {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  color: #b18963;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+}
+.contact-us-page .contact-form-img .sheepPeersForm .btn-submit button:hover {
+  background-color: #fff;
+}
+.contact-us-page .contact-form-img .sheepPeersForm .btn-submit button:hover .navLink {
+  color: #b18963;
+}
+.contact-us-page .contact-form-img .sheepPeersForm .btn-submit button:hover i {
+  background-color: #b18963;
+  color: #fff;
+}
+.contact-us-page .contact-form-img .card-img {
+  position: relative;
+}
+.contact-us-page .contact-form-img .card-img .overlay {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.63);
+}
+
+.aboutContentImg {
+  margin-top: 65px;
+}
+.aboutContentImg .about-content h5 {
+  color: #b18963;
+  font-size: 28px;
+  margin: 0;
+  margin-bottom: 13px;
+}
+.aboutContentImg .about-content p {
+  color: rgba(38, 38, 38, 0.7);
+  font-size: 16px;
+  margin-bottom: 20px;
+  width: 540px;
+  line-height: 28px;
+  max-width: 100%;
+}
+.aboutContentImg .about-img {
+  text-align: right;
+}
+.aboutContentImg .about-img img {
+  max-height: 482px;
+}
+
+.aboutCards {
+  margin-bottom: 56px;
+  margin-top: 102px;
+}
+.aboutCards .aboutCar {
+  margin-bottom: 30px;
+}
+.aboutCards .card-img {
+  border-radius: 0;
+  position: relative;
+}
+.aboutCards .card-img::after {
+  background-color: rgba(0, 0, 0, 0.46);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+.aboutCards .card-img h5 {
+  font-size: 41px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: absolute;
+  bottom: -5px;
+  right: -2px;
+  margin: 0;
+  z-index: 9;
+}
+.aboutCards .card-text {
+  margin: 0;
+  color: rgba(38, 38, 38, 0.7);
+  font-size: 16px;
+  margin-top: 26px;
+}
+
+.activeInput {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translate(2px);
 }
 
 .site-footer {
@@ -1182,6 +1541,20 @@ button {
   border-color: #fff;
 }
 
+.all-offers {
+  text-align: center;
+  margin-top: 50px;
+}
+.all-offers a {
+  border: 2px solid #b18963;
+  color: #b18963;
+  padding: 10px 20px;
+}
+.all-offers a:hover {
+  background-color: #fff;
+  border-color: #fff;
+}
+
 @media (max-width: 2560px) {
   .header-slider .edgtf-lighter-effect,
 .about .edgtf-lighter-effect-top {
@@ -1247,6 +1620,25 @@ button {
   .footerDiv {
     margin-bottom: 30px;
   }
+
+  .offer-info .offerCard {
+    height: fit-content;
+    padding-right: 10px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  .offer-info .offerCard .offer-info-img {
+    position: unset;
+    transform: none;
+  }
+
+  .offer-info .offerCard .expire {
+    margin: auto;
+  }
+
+  .contact-us-page .contact-form-img .card-img {
+    margin-top: 50px;
+  }
 }
 /* Small Screens */
 /* Mobile & Tablets */
@@ -1279,6 +1671,10 @@ button {
     bottom: -63px;
     right: 0;
   }
+
+  .contact-us-page .contact-form-img {
+    padding: 40px 20px;
+  }
 }
 @media (max-width: 376px) {
   .meune-card .card-title::after {
@@ -1290,7 +1686,7 @@ button {
     content: "--------";
   }
 }
-.sidenav .sideMenue li a::before {
+.sidenav .sideMenue li a::before, .breadcrumb ul li::after, .breadcrumb ul li:first-child a::before {
   font-family: uicons-regular-rounded !important;
   font-style: normal;
   font-weight: normal !important;
@@ -1301,7 +1697,7 @@ button {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.header-slider .slide, .about, .offer-card .card-img, .meune-card .card-img, .our-numbers, .contact-div {
+.breadcrumb, .header-slider .slide, .about, .offer-card .card-img, .meune-card .card-img, .our-numbers, .aboutCards .card-img, .contact-div {
   -webkit-background-size: cover;
   -webkit-background-position: center;
   -moz-background-position: center;
@@ -1310,7 +1706,7 @@ button {
   background-size: cover;
 }
 
-.header-slider .slide .slide__content--headings .button-custom, .feat-card, .about .aboutContent .btn-more a, .menue .btn-more a {
+.custom-navbar .links li.join, .custom-navbar .links li.join.joinLogin, .header-slider .slide .slide__content--headings .button-custom, .feat-card, .about .aboutContent .btn-more a, .menue .btn-more a, .contact-us-page .contact-form-img .sheepPeersForm .btn-submit button, .contact-us-page .contact-form-img .sheepPeersForm .btn-submit button i, .all-offers a {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
