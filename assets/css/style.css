@@ -1490,6 +1490,40 @@ button {
   color: #fff;
 }
 
+.login-page .contact-form-img {
+  width: 50%;
+  margin: auto;
+  margin-top: -100px;
+}
+.login-page .btn-login {
+  text-align: center;
+  margin-top: 10px;
+}
+.login-page .btn-login button {
+  background-color: #b18963;
+  color: #fff;
+  padding: 5px 10px;
+  border: 0;
+  border: 2px solid #b18963;
+}
+.login-page .btn-login button:hover {
+  background-color: #Fff;
+  color: #b18963;
+}
+.login-page .forget {
+  margin-top: 20px;
+}
+.login-page .forget a {
+  color: #005ca7;
+}
+.login-page .newAcount {
+  margin-top: 20px;
+  text-align: left;
+}
+.login-page .newAcount a {
+  color: #005ca7;
+}
+
 .site-footer {
   padding-top: 100px;
   padding-bottom: 150px;
@@ -1658,6 +1692,10 @@ button {
   .contact-us-page .contact-form-img .card-img {
     margin-top: 50px;
   }
+
+  .login-page .contact-form-img {
+    width: 100%;
+  }
 }
 /* Small Screens */
 /* Mobile & Tablets */
@@ -1694,6 +1732,10 @@ button {
   .contact-us-page .contact-form-img {
     padding: 40px 20px;
   }
+
+  .login-page .newAcount {
+    text-align: right;
+  }
 }
 @media (max-width: 376px) {
   .meune-card .card-title::after {
@@ -1725,7 +1767,7 @@ button {
   background-size: cover;
 }
 
-.custom-navbar .links li.join, .custom-navbar .links li.join.joinLogin, .header-slider .slide .slide__content--headings .button-custom, .feat-card, .about .aboutContent .btn-more a, .menue .btn-more a, .contact-us-page .contact-form-img .sheepPeersForm .btn-submit button, .contact-us-page .contact-form-img .sheepPeersForm .btn-submit button i, .all-offers a {
+.custom-navbar .links li.join, .custom-navbar .links li.join.joinLogin, .header-slider .slide .slide__content--headings .button-custom, .feat-card, .about .aboutContent .btn-more a, .menue .btn-more a, .contact-us-page .contact-form-img .sheepPeersForm .btn-submit button, .contact-us-page .contact-form-img .sheepPeersForm .btn-submit button i, .login-page .btn-login button, .all-offers a {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;

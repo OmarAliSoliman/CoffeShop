@@ -1666,6 +1666,44 @@ button {
   }
 }
 
+.login-page{
+  .contact-form-img{
+    // margin-top: 0;
+    width: 50%;
+    margin: auto;
+    margin-top: -100px;
+  }
+  .btn-login{
+    text-align: center;
+    margin-top: 10px;
+    button{
+      background-color: $mainColor;
+      color: #fff;
+      padding: 5px 10px;
+      border: 0;
+      border: 2px solid $mainColor;
+      @extend %transition;
+      &:hover{
+        background-color: #Fff;
+        color: $mainColor;
+      }
+    }
+  }
+  .forget{
+    margin-top: 20px;
+    a{
+      color: #005ca7;
+    }
+  }
+  .newAcount{
+    margin-top: 20px;
+    text-align: left;
+    a{
+      color: #005ca7;
+    }
+  }
+}
+
 .site-footer {
   // @extend %img-bg-style;
   padding-top: 100px;
@@ -1852,6 +1890,9 @@ button {
   .contact-us-page .contact-form-img .card-img{
     margin-top: 50px;
   }
+  .login-page .contact-form-img{
+    width: 100%;
+  }
 }
 
 @media (max-width: 960px) {
@@ -1894,6 +1935,9 @@ button {
   }
   .contact-us-page .contact-form-img{
     padding: 40px 20px;
+  }
+  .login-page .newAcount{
+    text-align: right;
   }
 }
 
