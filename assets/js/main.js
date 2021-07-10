@@ -131,6 +131,19 @@ $(document).ready(function () {
     });
   }
 
+  if($('.shoPassword').length){
+    $('.shoPassword').click(function(){
+      var getInput = $(this).parent().find('.form-control');
+      if(getInput.attr('type') === 'password'){
+        getInput.attr('type', 'text')
+        $(this).find('i').attr('class', 'fi-rr-eye-crossed')
+      }else{
+        getInput.attr('type', 'password')
+        $(this).find('i').attr('class', 'fi-rr-eye')
+      }
+    })
+  }
+
 });
 
 function openNav() {

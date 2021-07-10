@@ -1702,6 +1702,19 @@ button {
       color: #005ca7;
     }
   }
+  .form-group{
+    position: relative;
+    .shoPassword{
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      margin-top: 3px;
+      left: 10px;
+      z-index: 9;
+      cursor: pointer;
+      transition:  all .5s ease-in-out;
+    }
+  }
 }
 
 .site-footer {

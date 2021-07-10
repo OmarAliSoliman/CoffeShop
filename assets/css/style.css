@@ -1523,6 +1523,19 @@ button {
 .login-page .newAcount a {
   color: #005ca7;
 }
+.login-page .form-group {
+  position: relative;
+}
+.login-page .form-group .shoPassword {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin-top: 3px;
+  left: 10px;
+  z-index: 9;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
 
 .site-footer {
   padding-top: 100px;
