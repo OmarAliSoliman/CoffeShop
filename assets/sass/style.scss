@@ -367,7 +367,6 @@ button {
   z-index: 10;
 }
 
-
 .pagination {
   // display: inline-block;
   // border: 1px solid #000;
@@ -484,37 +483,67 @@ button {
           line-height: 37px;
           color: $secondColor;
         }
-        &:hover{
+        &:hover {
           background-color: #fff;
-          a{
+          a {
             color: $mainColor;
           }
-          i{
+          i {
             background-color: $mainColor;
             color: #fff;
           }
         }
-        &.joinLogin{
+        &.joinLogin {
           background-color: transparent;
           border-radius: 0;
           border: 2px solid $secondColor;
           line-height: 45px;
           @extend %transition;
-          a{
+          a {
             color: $secondColor;
             // @extend %transition;
           }
-          i{
+          i {
             background-color: $secondColor;
             color: #fff;
           }
-          &:hover{
+          &:hover {
             background-color: $secondColor;
-            a{
+            a {
               color: #fff;
             }
           }
         }
+      }
+    }
+  }
+}
+
+.custom-navbar{
+  .container{
+    position: relative;
+  }
+  .whenLogin{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 0;
+    z-index: 9;
+    .dropdown{
+      .btn{
+        background-color: $mainColor;
+        border-color: $mainColor;
+        &:focus{
+          outline: 0 !important;
+          box-shadow: none;
+        }
+      }
+    }
+    .dropdown-menu{
+      left: 0 !important;
+      right: unset !important;
+      i{
+        color: $mainColor;
       }
     }
   }
@@ -528,7 +557,7 @@ button {
   display: block;
   text-align: center;
   position: relative;
-  background-attachment: fixed;
+  // background-attachment: fixed;
   position: relative;
   &::before {
     content: "";
@@ -588,7 +617,7 @@ button {
       }
     }
   }
-  .edgtf-lighter-effect-top{
+  .edgtf-lighter-effect-top {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -1273,7 +1302,7 @@ button {
       color: #fff;
       padding: 7px 15px;
     }
-    .price{
+    .price {
       width: 65px;
       height: 65px;
       background-color: $mainColor;
@@ -1397,57 +1426,57 @@ button {
   }
 }
 
-.all-offers-page{
+.all-offers-page {
   margin-bottom: 90px;
-  .offer-card{
+  .offer-card {
     margin-bottom: 20px;
   }
 }
 
-.offer-info{
+.offer-info {
   // margin-bottom: 100px;
-  .section-header{
+  .section-header {
     // margin-bottom: 15px;
     margin-bottom: 0;
-    h5{
+    h5 {
       font-size: 25px;
       margin: 0;
     }
   }
-  .offerCard{
-    border: 1px solid #DDD;
+  .offerCard {
+    border: 1px solid #ddd;
     padding: 10px;
     border-radius: 5px;
     text-align: center;
     position: relative;
-    .offer-info-img{
-      img{
+    .offer-info-img {
+      img {
         border-radius: 5px;
         width: 400px;
       }
     }
-    .date{
+    .date {
       font-size: 15px;
       color: #444;
     }
-    .card-title{
+    .card-title {
       font-size: 25px;
       color: $mainColor;
       font-weight: 600;
       margin-top: 30px;
       margin-bottom: 10px;
     }
-    .interval{
+    .interval {
       margin-top: 10px;
       margin-bottom: 10px;
     }
-    .expire{
+    .expire {
       border: 1px dotted $secondColor;
       width: fit-content;
       padding: 10px 20px;
       margin-top: 40px;
       margin: auto;
-      p{
+      p {
         margin: 0;
       }
     }
@@ -1609,7 +1638,7 @@ button {
     @extend %img-bg-style;
     border-radius: 0;
     position: relative;
-    &::after{
+    &::after {
       background-color: rgba(#000000, 46%);
       position: absolute;
       top: 0;
@@ -1644,15 +1673,15 @@ button {
   transform: translate(2px);
 }
 
-#offerModal{
-  .modal-dialog{
+#offerModal {
+  .modal-dialog {
     width: 700px;
     max-width: 100%;
   }
-  .modal-footer{
+  .modal-footer {
     text-align: right;
     justify-content: right;
-    .btn{
+    .btn {
       background-color: transparent;
       border: 2px solid $mainColor;
       color: $secondColor;
@@ -1666,45 +1695,45 @@ button {
   }
 }
 
-.login-page{
-  .contact-form-img{
+.login-page {
+  .contact-form-img {
     // margin-top: 0;
     width: 50%;
     margin: auto;
     margin-top: -100px;
   }
-  .btn-login{
+  .btn-login {
     text-align: center;
     margin-top: 10px;
-    button{
+    button {
       background-color: $mainColor;
       color: #fff;
       padding: 5px 10px;
       border: 0;
       border: 2px solid $mainColor;
       @extend %transition;
-      &:hover{
-        background-color: #Fff;
+      &:hover {
+        background-color: #fff;
         color: $mainColor;
       }
     }
   }
-  .forget{
+  .forget {
     margin-top: 20px;
-    a{
+    a {
       color: #005ca7;
     }
   }
-  .newAcount{
+  .newAcount {
     margin-top: 20px;
     text-align: left;
-    a{
+    a {
       color: #005ca7;
     }
   }
-  .form-group{
+  .form-group {
     position: relative;
-    .shoPassword{
+    .shoPassword {
       position: absolute;
       top: 50%;
       transform: translate(0, -50%);
@@ -1712,7 +1741,236 @@ button {
       left: 10px;
       z-index: 9;
       cursor: pointer;
-      transition:  all .5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}
+
+.my-account {
+  margin-bottom: 100px;
+  .my-account-navs {
+    border: 1px solid #f5f5f5;
+    margin-top: 50px;
+    border-radius: 6px;
+
+    .card-header {
+      background-color: $mainColor;
+      font-size: 18px;
+      border-bottom: 0;
+      height: 60px;
+      line-height: 60px;
+      padding: 0;
+      padding-right: 10px;
+      color: #fff;
+    }
+
+    .nav-link {
+      padding: 0px;
+      padding: 0 20px 0 20px;
+      line-height: 65px;
+      border-bottom: 1px solid #f5f5f5;
+      border-radius: 0;
+      color: #555;
+      font-size: 15px;
+      height: 65px;
+
+      img {
+        width: 20px;
+        margin-left: 5px;
+      }
+    }
+
+    .active {
+      background-color: rgb(245, 245, 245);
+    }
+  }
+
+  .log-out {
+    margin-top: 10px;
+
+    .btn {
+      background-color: rgba($color: #a00101, $alpha: .8);
+      color: #fff;
+      width: 100%;
+      &:hover{
+        background-color: #a00101;
+      }
+    }
+  }
+
+  .tab-content {
+    margin-top: 50px;
+
+    .most-search-header {
+      background-color: $mainColor;
+      height: 50px;
+      text-align: right;
+      color: #fff;
+      border-radius: 8px;
+
+      h5 {
+        line-height: 50px;
+        font-size: 17px;
+      }
+    }
+
+    .account-info-form {
+      margin-top: 30px;
+      .personal-img {
+        margin-bottom: 60px;
+        padding-right: 105px;
+        position: relative;
+        .personal-img-validation-delete {
+          color: #f00;
+          font-size: 13px;
+          cursor: pointer;
+          position: absolute;
+          right: 0;
+          bottom: -50px;
+          display: none;
+        }
+        .per {
+          width: 82px;
+          height: 82px;
+          border-radius: 50%;
+          background-position: center;
+          background-size: cover;
+          border: 3px solid #fff;
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          // float: right;
+          position: absolute;
+          right: 15px;
+        }
+        .card-title {
+          margin: 0;
+          font-size: 14px;
+          color: #626262;
+          margin-top: 10px;
+          cursor: pointer !important;
+        }
+        .upload-btn-wrapper {
+          position: relative;
+          overflow: hidden;
+          display: inline-block;
+          margin: 0;
+          cursor: pointer !important;
+        }
+
+        .btn {
+          color: $mainColor;
+          cursor: pointer !important;
+          text-align: right;
+          padding: 0;
+          font-size: 12px;
+        }
+
+        .upload-btn-wrapper input[type="file"] {
+          font-size: 100px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          opacity: 0;
+        }
+      }
+
+      .custom-change{
+        text-align: center;
+        display: block;
+        padding: 5px 10px;
+        // background-color: rgba($secondColor, 86%);
+        border: 2px solid $secondColor;
+        color: $secondColor;
+        &:hover{
+          background-color: $secondColor;
+          color: #fff;
+        }
+      }
+
+      .form-group {
+        label {
+          background-color: $mainColor;
+        }
+        label {
+          position: absolute;
+          background-color: #647583;
+          font-size: 12px;
+          color: #fff;
+          padding: 0 9px;
+          border-radius: 2px;
+          top: -8px;
+          right: 10px;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.5s ease;
+        }
+        .form-control {
+          background-color: rgba($mainColor, 7%);
+          height: 50px;
+          border-radius: 0;
+          border: none;
+          &::placeholder {
+            color: rgba(#680d31, 38%);
+          }
+          &:focus {
+            border: 1px solid $mainColor;
+            background-color: #fff;
+          }
+        }
+      }
+
+      .btn-submit {
+        // text-align: center;
+        margin-top: 10px;
+
+        .btn {
+          background-color: $mainColor;
+          border: 2px solid $mainColor;
+          color: #fff;
+          width: 100%;
+          padding: 10px;
+          &:hover{
+            background-color: transparent;
+            color: $mainColor;
+          }
+        }
+      }
+    }
+  }
+
+  .memberCardSection {
+    .member-card{
+      margin-top: 30px;
+      text-align: center;
+      .card-img{
+        width: 430px;
+        max-width: 100%;
+        position: relative;
+        margin: auto;
+        img{
+        }
+        .numberOfmemeber{
+          position: absolute;
+          color: #fff;
+          z-index: 9;
+          right: 10px;
+          bottom: 55px;
+        }
+      }
+      .member-number{
+        border: 1px dotted $mainColor;
+        width: fit-content;
+        margin: auto;
+        margin-top: 20px;
+        padding: 10px 80px;
+        h5{
+          margin: 0;
+          font-size: 15px;
+        }
+        span{
+          display: inline-block;
+          font-size: 20px;
+        }
+      }
     }
   }
 }
@@ -1800,15 +2058,15 @@ button {
   }
 }
 
-.all-offers{
+.all-offers {
   text-align: center;
   margin-top: 50px;
-  a{
+  a {
     border: 2px solid $mainColor;
     color: $mainColor;
     padding: 10px 20px;
     @extend %transition;
-    &:hover{
+    &:hover {
       background-color: #fff;
       border-color: #fff;
     }
@@ -1856,7 +2114,7 @@ button {
   }
   .custom-navbar {
     position: relative;
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 30px;
     .links {
       ul {
@@ -1892,18 +2150,21 @@ button {
     padding-right: 10px;
     padding-bottom: 30px;
     text-align: center;
-    .offer-info-img{
+    .offer-info-img {
       position: unset;
       transform: none;
     }
   }
-  .offer-info .offerCard .expire{
+  .offer-info .offerCard .expire {
     margin: auto;
   }
-  .contact-us-page .contact-form-img .card-img{
+  .contact-us-page .contact-form-img .card-img {
     margin-top: 50px;
   }
-  .login-page .contact-form-img{
+  .login-page .contact-form-img {
+    width: 100%;
+  }
+  .my-account-option {
     width: 100%;
   }
 }
@@ -1946,11 +2207,17 @@ button {
     bottom: -63px;
     right: 0;
   }
-  .contact-us-page .contact-form-img{
+  .contact-us-page .contact-form-img {
     padding: 40px 20px;
   }
-  .login-page .newAcount{
+  .login-page .newAcount {
     text-align: right;
+  }
+  .my-account .memberCardSection .member-card .card-img .numberOfmemeber{
+    bottom: 42px;
+  }
+  .custom-navbar .whenLogin{
+    left: 17px;
   }
 }
 

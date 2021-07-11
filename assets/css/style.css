@@ -468,6 +468,32 @@ button {
   color: #fff;
 }
 
+.custom-navbar .container {
+  position: relative;
+}
+.custom-navbar .whenLogin {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 0;
+  z-index: 9;
+}
+.custom-navbar .whenLogin .dropdown .btn {
+  background-color: #b18963;
+  border-color: #b18963;
+}
+.custom-navbar .whenLogin .dropdown .btn:focus {
+  outline: 0 !important;
+  box-shadow: none;
+}
+.custom-navbar .whenLogin .dropdown-menu {
+  left: 0 !important;
+  right: unset !important;
+}
+.custom-navbar .whenLogin .dropdown-menu i {
+  color: #b18963;
+}
+
 .breadcrumb {
   padding-top: 148px;
   padding-bottom: 130px;
@@ -475,7 +501,6 @@ button {
   display: block;
   text-align: center;
   position: relative;
-  background-attachment: fixed;
   position: relative;
 }
 .breadcrumb::before {
@@ -1257,7 +1282,7 @@ button {
   margin: 0;
 }
 .offer-info .offerCard {
-  border: 1px solid #DDD;
+  border: 1px solid #ddd;
   padding: 10px;
   border-radius: 5px;
   text-align: center;
@@ -1507,7 +1532,7 @@ button {
   border: 2px solid #b18963;
 }
 .login-page .btn-login button:hover {
-  background-color: #Fff;
+  background-color: #fff;
   color: #b18963;
 }
 .login-page .forget {
@@ -1535,6 +1560,209 @@ button {
   z-index: 9;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
+}
+
+.my-account {
+  margin-bottom: 100px;
+}
+.my-account .my-account-navs {
+  border: 1px solid #f5f5f5;
+  margin-top: 50px;
+  border-radius: 6px;
+}
+.my-account .my-account-navs .card-header {
+  background-color: #b18963;
+  font-size: 18px;
+  border-bottom: 0;
+  height: 60px;
+  line-height: 60px;
+  padding: 0;
+  padding-right: 10px;
+  color: #fff;
+}
+.my-account .my-account-navs .nav-link {
+  padding: 0px;
+  padding: 0 20px 0 20px;
+  line-height: 65px;
+  border-bottom: 1px solid #f5f5f5;
+  border-radius: 0;
+  color: #555;
+  font-size: 15px;
+  height: 65px;
+}
+.my-account .my-account-navs .nav-link img {
+  width: 20px;
+  margin-left: 5px;
+}
+.my-account .my-account-navs .active {
+  background-color: whitesmoke;
+}
+.my-account .log-out {
+  margin-top: 10px;
+}
+.my-account .log-out .btn {
+  background-color: rgba(160, 1, 1, 0.8);
+  color: #fff;
+  width: 100%;
+}
+.my-account .log-out .btn:hover {
+  background-color: #a00101;
+}
+.my-account .tab-content {
+  margin-top: 50px;
+}
+.my-account .tab-content .most-search-header {
+  background-color: #b18963;
+  height: 50px;
+  text-align: right;
+  color: #fff;
+  border-radius: 8px;
+}
+.my-account .tab-content .most-search-header h5 {
+  line-height: 50px;
+  font-size: 17px;
+}
+.my-account .tab-content .account-info-form {
+  margin-top: 30px;
+}
+.my-account .tab-content .account-info-form .personal-img {
+  margin-bottom: 60px;
+  padding-right: 105px;
+  position: relative;
+}
+.my-account .tab-content .account-info-form .personal-img .personal-img-validation-delete {
+  color: #f00;
+  font-size: 13px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  display: none;
+}
+.my-account .tab-content .account-info-form .personal-img .per {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  position: absolute;
+  right: 15px;
+}
+.my-account .tab-content .account-info-form .personal-img .card-title {
+  margin: 0;
+  font-size: 14px;
+  color: #626262;
+  margin-top: 10px;
+  cursor: pointer !important;
+}
+.my-account .tab-content .account-info-form .personal-img .upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  margin: 0;
+  cursor: pointer !important;
+}
+.my-account .tab-content .account-info-form .personal-img .btn {
+  color: #b18963;
+  cursor: pointer !important;
+  text-align: right;
+  padding: 0;
+  font-size: 12px;
+}
+.my-account .tab-content .account-info-form .personal-img .upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.my-account .tab-content .account-info-form .custom-change {
+  text-align: center;
+  display: block;
+  padding: 5px 10px;
+  border: 2px solid #262626;
+  color: #262626;
+}
+.my-account .tab-content .account-info-form .custom-change:hover {
+  background-color: #262626;
+  color: #fff;
+}
+.my-account .tab-content .account-info-form .form-group label {
+  background-color: #b18963;
+}
+.my-account .tab-content .account-info-form .form-group label {
+  position: absolute;
+  background-color: #647583;
+  font-size: 12px;
+  color: #fff;
+  padding: 0 9px;
+  border-radius: 2px;
+  top: -8px;
+  right: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+.my-account .tab-content .account-info-form .form-group .form-control {
+  background-color: rgba(177, 137, 99, 0.07);
+  height: 50px;
+  border-radius: 0;
+  border: none;
+}
+.my-account .tab-content .account-info-form .form-group .form-control::placeholder {
+  color: rgba(104, 13, 49, 0.38);
+}
+.my-account .tab-content .account-info-form .form-group .form-control:focus {
+  border: 1px solid #b18963;
+  background-color: #fff;
+}
+.my-account .tab-content .account-info-form .btn-submit {
+  margin-top: 10px;
+}
+.my-account .tab-content .account-info-form .btn-submit .btn {
+  background-color: #b18963;
+  border: 2px solid #b18963;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+}
+.my-account .tab-content .account-info-form .btn-submit .btn:hover {
+  background-color: transparent;
+  color: #b18963;
+}
+.my-account .memberCardSection .member-card {
+  margin-top: 30px;
+  text-align: center;
+}
+.my-account .memberCardSection .member-card .card-img {
+  width: 430px;
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.my-account .memberCardSection .member-card .card-img .numberOfmemeber {
+  position: absolute;
+  color: #fff;
+  z-index: 9;
+  right: 10px;
+  bottom: 55px;
+}
+.my-account .memberCardSection .member-card .member-number {
+  border: 1px dotted #b18963;
+  width: fit-content;
+  margin: auto;
+  margin-top: 20px;
+  padding: 10px 80px;
+}
+.my-account .memberCardSection .member-card .member-number h5 {
+  margin: 0;
+  font-size: 15px;
+}
+.my-account .memberCardSection .member-card .member-number span {
+  display: inline-block;
+  font-size: 20px;
 }
 
 .site-footer {
@@ -1654,7 +1882,7 @@ button {
 
   .custom-navbar {
     position: relative;
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 30px;
   }
   .custom-navbar .links ul {
@@ -1709,6 +1937,10 @@ button {
   .login-page .contact-form-img {
     width: 100%;
   }
+
+  .my-account-option {
+    width: 100%;
+  }
 }
 /* Small Screens */
 /* Mobile & Tablets */
@@ -1748,6 +1980,14 @@ button {
 
   .login-page .newAcount {
     text-align: right;
+  }
+
+  .my-account .memberCardSection .member-card .card-img .numberOfmemeber {
+    bottom: 42px;
+  }
+
+  .custom-navbar .whenLogin {
+    left: 17px;
   }
 }
 @media (max-width: 376px) {
