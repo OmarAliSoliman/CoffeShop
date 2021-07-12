@@ -213,6 +213,28 @@ button {
         color: $secondColor;
       }
     }
+    &.joinLogin {
+      background-color: transparent;
+      border-radius: 0;
+      border: 2px solid $secondColor;
+      line-height: 45px;
+      @extend %transition;
+      text-align: center;
+      a {
+        color: $secondColor;
+        // @extend %transition;
+      }
+      i {
+        background-color: $secondColor;
+        color: #fff;
+      }
+      &:hover {
+        background-color: $secondColor;
+        a {
+          color: #fff;
+        }
+      }
+    }
   }
   .navLink {
     // padding: 8px 8px 8px 32px;
@@ -519,30 +541,30 @@ button {
   }
 }
 
-.custom-navbar{
-  .container{
+.custom-navbar {
+  .container {
     position: relative;
   }
-  .whenLogin{
+  .whenLogin {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
     left: 0;
     z-index: 9;
-    .dropdown{
-      .btn{
+    .dropdown {
+      .btn {
         background-color: $mainColor;
         border-color: $mainColor;
-        &:focus{
+        &:focus {
           outline: 0 !important;
           box-shadow: none;
         }
       }
     }
-    .dropdown-menu{
+    .dropdown-menu {
       left: 0 !important;
       right: unset !important;
-      i{
+      i {
         color: $mainColor;
       }
     }
@@ -1789,10 +1811,10 @@ button {
     margin-top: 10px;
 
     .btn {
-      background-color: rgba($color: #a00101, $alpha: .8);
+      background-color: rgba($color: #a00101, $alpha: 0.8);
       color: #fff;
       width: 100%;
-      &:hover{
+      &:hover {
         background-color: #a00101;
       }
     }
@@ -1873,14 +1895,14 @@ button {
         }
       }
 
-      .custom-change{
+      .custom-change {
         text-align: center;
         display: block;
         padding: 5px 10px;
         // background-color: rgba($secondColor, 86%);
         border: 2px solid $secondColor;
         color: $secondColor;
-        &:hover{
+        &:hover {
           background-color: $secondColor;
           color: #fff;
         }
@@ -1928,7 +1950,7 @@ button {
           color: #fff;
           width: 100%;
           padding: 10px;
-          &:hover{
+          &:hover {
             background-color: transparent;
             color: $mainColor;
           }
@@ -1938,17 +1960,17 @@ button {
   }
 
   .memberCardSection {
-    .member-card{
+    .member-card {
       margin-top: 30px;
       text-align: center;
-      .card-img{
+      .card-img {
         width: 430px;
         max-width: 100%;
         position: relative;
         margin: auto;
-        img{
+        img {
         }
-        .numberOfmemeber{
+        .numberOfmemeber {
           position: absolute;
           color: #fff;
           z-index: 9;
@@ -1956,17 +1978,17 @@ button {
           bottom: 55px;
         }
       }
-      .member-number{
+      .member-number {
         border: 1px dotted $mainColor;
         width: fit-content;
         margin: auto;
         margin-top: 20px;
         padding: 10px 80px;
-        h5{
+        h5 {
           margin: 0;
           font-size: 15px;
         }
-        span{
+        span {
           display: inline-block;
           font-size: 20px;
         }
@@ -2070,6 +2092,125 @@ button {
       background-color: #fff;
       border-color: #fff;
     }
+  }
+}
+
+.product-page {
+  margin-bottom: 150px;
+  .menueTabs {
+    .tile {
+      // width: 80%;
+      // border: 1px solid #ddd;
+      margin: 60px auto;
+    }
+    #tile-1 .tab-pane {
+      padding: 15px;
+      // height: 80px;
+    }
+    #tile-1 .nav-tabs {
+      position: relative;
+      border: none;
+      background-color: rgba($mainColor, 80%);
+      /*   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2); */
+      border-radius: 0;
+    }
+    #tile-1 .nav-tabs li {
+      margin: 0px;
+    }
+    #tile-1 .nav-tabs li a {
+      position: relative;
+      margin-right: 0px;
+      padding: 20px 40px;
+      font-size: 18px;
+      border: none;
+      color: $secondColor;
+      i {
+        margin-left: 5px;
+      }
+    }
+    #tile-1 .nav-tabs a:hover {
+      background-color: $mainColor;
+      border: none;
+      color: #fff;
+    }
+    #tile-1 .slider {
+      display: inline-block;
+      width: 30px;
+      height: 4px;
+      border-radius: 3px;
+      background-color: $secondColor;
+      position: absolute;
+      z-index: 1200;
+      top: 0;
+      transition: all 0.4s linear;
+    }
+    #tile-1 .nav-tabs .active {
+      background-color: $mainColor;
+      border: none;
+      border-radius: 0;
+      color: #fff;
+    }
+  }
+  .tabHead {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-size: 30px;
+  }
+}
+
+.tabcard {
+  padding-right: 75px;
+  // border: 1px solid #000;
+  position: relative;
+  height: 80px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding-top: 10px;
+  box-shadow: 0 1px 2px 2px rgba(#000000, 5%);
+  margin-bottom: 10px;
+  .card-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    @extend %img-bg-style;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  .card-title,
+  .card-text {
+    margin: 0;
+  }
+  .card-title {
+    color: $mainColor;
+  }
+  .card-text {
+    color: #999;
+  }
+  .price {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+    h5 {
+      font-size: 15px;
+      margin: 0;
+      font-weight: bold;
+      color: $secondColor;
+      span {
+        font-weight: normal;
+        color: $mainColor;
+      }
+    }
+  }
+}
+
+.menue-page{
+  margin-bottom: 60px;
+  iframe{
+    width: 100%;
+    height: 1300px;
   }
 }
 
@@ -2213,11 +2354,32 @@ button {
   .login-page .newAcount {
     text-align: right;
   }
-  .my-account .memberCardSection .member-card .card-img .numberOfmemeber{
+  .my-account .memberCardSection .member-card .card-img .numberOfmemeber {
     bottom: 42px;
   }
-  .custom-navbar .whenLogin{
+  .custom-navbar .whenLogin {
     left: 17px;
+  }
+  .product-page .menueTabs #tile-1 .nav-tabs {
+    display: block;
+  }
+  .product-page .menueTabs #tile-1 .slider {
+    display: none;
+  }
+  .tabcard {
+    padding-right: 0;
+    height: auto;
+    padding: 20px 0px;
+    text-align: center;
+    .card-img {
+      position: unset;
+      transform: none;
+      margin: auto;
+    }
+    .price{
+      position: unset;
+      transform: none;
+    }
   }
 }
 
