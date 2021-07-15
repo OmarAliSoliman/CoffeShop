@@ -66,7 +66,7 @@
   <div class="container">
     <div class="topheader">
       <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="col-sm-12 col-md-6 col-lg-6 langParent">
           <span class="lang">
             <select name="" id="" class="langSelect">
               <option value="">AR</option>
@@ -113,7 +113,8 @@
         </ul>
         <div class="whenLogin">
           <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               مرحبا بك
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -288,11 +289,17 @@ C1915.898,10.076,1910.912,9.958,1906.688,12.029z"></path>
               <i class="fi-rr-user"></i>
               <span>معلومات الحساب</span>
             </a>
-            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#account-ads" role="tab"
+            <a class="nav-link" id="v-pills-account-tab" data-toggle="pill" href="#account-cart" role="tab"
               aria-controls="v-pills-profile" aria-selected="false">
               <!-- <img src="./assets/images/account-ads.webp" alt=""> -->
               <i class="fi-rr-id-badge"></i>
               <span>بطاقة العضوية</span>
+            </a>
+            <a class="nav-link" id="v-pills-setting-tab" data-toggle="pill" href="#setting" role="tab"
+              aria-controls="v-pills-setting" aria-selected="false">
+              <!-- <img src="./assets/images/account-ads.webp" alt=""> -->
+              <i class="fi-rr-settings"></i>
+              <span>اعدادات الحساب</span>
             </a>
           </div>
           <div class="log-out">
@@ -358,30 +365,12 @@ C1915.898,10.076,1910.912,9.958,1906.688,12.029z"></path>
                         <button type="submit" class="btn">حفظ البيانات</button>
                       </div>
                     </div>
-                    <div class="col-sm-12 col-lg-4">
-                      <a href="" class="custom-change">
-                        <i class="fas fa-unlock-alt"></i>
-                        <span>تغيير كلمة المرور</span>
-                      </a>
-                    </div>
-                    <div class="col-sm-12 col-lg-4">
-                      <a href="" class="custom-change">
-                        <i class="fas fa-mobile-alt"></i>
-                        <span>تغيير رقم الهاتف</span>
-                      </a>
-                    </div>
-                    <div class="col-sm-12 col-lg-4">
-                      <a href="" class="custom-change">
-                        <i class="fas fa-envelope"></i>
-                        <span>تغيير البريد الالكتروني</span>
-                      </a>
-                    </div>
-
                   </div>
                 </form>
               </div>
             </div>
-            <div class="tab-pane new-ads fade" id="account-ads" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+            <div class="tab-pane new-ads fade" id="account-cart" role="tabpanel"
+              aria-labelledby="v-pills-account-cart-tab">
               <div class="most-search-header">
                 <div class="container">
                   <h5>بطاقة العضوية</h5>
@@ -395,6 +384,35 @@ C1915.898,10.076,1910.912,9.958,1906.688,12.029z"></path>
                 <div class="member-number">
                   <h5>رقم العضوية</h5>
                   <span class="">00000050</span>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane new-ads fade" id="setting" role="tabpanel" aria-labelledby="v-pills-setting-tab">
+              <div class="most-search-header">
+                <div class="container">
+                  <h5>بطاقة العضوية</h5>
+                </div>
+              </div>
+              <div class="account-info-form sheepPeersForm">
+                <div class="row">
+                  <div class="col-sm-12 col-lg-12">
+                    <a href="" class="custom-change">
+                      <i class="fas fa-unlock-alt"></i>
+                      <span>تغيير كلمة المرور</span>
+                    </a>
+                  </div>
+                  <div class="col-sm-12 col-lg-12">
+                    <a href="" class="custom-change">
+                      <i class="fas fa-mobile-alt"></i>
+                      <span>تغيير رقم الهاتف</span>
+                    </a>
+                  </div>
+                  <div class="col-sm-12 col-lg-12">
+                    <a href="" class="custom-change">
+                      <i class="fas fa-envelope"></i>
+                      <span>تغيير البريد الالكتروني</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

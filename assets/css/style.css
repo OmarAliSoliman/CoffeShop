@@ -392,6 +392,10 @@ button {
   font-size: 14px;
   font-weight: 200;
 }
+
+.topheader .langParent{
+  direction: ltr;
+}
 .topheader .lang .nice-select {
   float: none;
   display: inline-block;
@@ -1425,6 +1429,7 @@ button {
 }
 .contact-us-page .contact-form-img .sheepPeersForm .btn-submit button:hover {
   background-color: #fff;
+  color: #b18963;
 }
 .contact-us-page .contact-form-img .sheepPeersForm .btn-submit button:hover .navLink {
   color: #b18963;
@@ -1701,7 +1706,8 @@ button {
 .my-account .tab-content .account-info-form .custom-change {
   text-align: center;
   display: block;
-  padding: 5px 10px;
+  padding: 10px 10px;
+  margin-bottom: 10px;
   border: 2px solid #262626;
   color: #262626;
 }
@@ -1896,14 +1902,20 @@ button {
   border: none;
   color: #262626;
 }
-.product-page .menueTabs #tile-1 .nav-tabs li a i {
-  margin-left: 5px;
+.product-page .menueTabs #tile-1 .nav-tabs li a img {
+  margin-left: 2px;
+  width: 30px;
 }
 .product-page .menueTabs #tile-1 .nav-tabs a:hover {
   background-color: #b18963;
   border: none;
   color: #fff;
 }
+
+.product-page .menueTabs #tile-1 .nav-tabs a:hover img{
+  filter: brightness(0) invert(1);
+}
+
 .product-page .menueTabs #tile-1 .slider {
   display: inline-block;
   width: 30px;
@@ -1921,6 +1933,11 @@ button {
   border-radius: 0;
   color: #fff;
 }
+
+.product-page .menueTabs #tile-1 .nav-tabs .active img{
+  filter: brightness(0) invert(1);
+}
+
 .product-page .tabHead {
   margin-bottom: 20px;
   margin-top: 10px;
