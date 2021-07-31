@@ -2227,4 +2227,16 @@ button {
   transition: all 0.3s ease-in-out;
 }
 
+
+
+.whatsapp-img {
+  width: 65px;
+  height: 65px;
+  position: fixed;
+  bottom: 10px;
+  left: 15px;
+  z-index: 9999;
+}
+
+
 /*# sourceMappingURL=style.css.map */
